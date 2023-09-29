@@ -1,0 +1,117 @@
+@use '../abstracts' as *;
+
+//  footer
+
+footer{
+    position: relative;
+
+    background-color: $footer-bg-color;
+    .container{
+        .footer-accordion{
+            padding: 20px 0;
+            @media (min-width: 768px) { 
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .item{
+                padding: 20px;
+                @media (min-width: 768px) { 
+                    width: 100%;
+                }
+                
+                .accordion-header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 16px;
+                    padding: 20px 0;
+                    width: 100%;
+                    color: $white-color;
+                    cursor: pointer;
+                    @media (min-width: 768px) { 
+                        font-size: 22px;
+                    }
+                    img{
+                        
+                    }
+                    i{
+                        @media (min-width: 768px) { 
+                            display: none;
+                        }
+                    }
+                }
+                .active{
+                    i{
+                        transform: rotate(-180deg);
+
+                    }
+                }
+                .content{
+                    display: none;
+                    flex-direction: column;
+                    margin: 10px 0;
+                    @media (min-width: 768px) { 
+                        display: flex;
+                    }
+                    p{
+                        color: $footer-light-text-color;
+                        @media (min-width: 768px) { 
+                            font-size: 16px;
+                        }
+                    }
+                    a{
+                        color: $footer-light-text-color;
+                        text-decoration: none;
+                        @media (min-width: 768px) { 
+                            font-size: 16px;
+                        }
+                    }
+                }
+    
+            }
+        }
+        .footer-line{
+            height: 80px;
+            
+            img{
+                position: absolute;
+                right: 0;
+                bottom: 80px;
+    
+            }
+        }
+        .bottom{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            border-top: 1px solid $dark-text-color;
+            .copyright{
+                color: $footer-light-text-color;
+                font-size: 11px;
+                @media (min-width: 768px) { 
+                    font-size: 16px;
+                }
+            }
+            .social-media{
+                .social-media-icons{
+                    a{
+                        margin: 0 2px;
+                        @media (min-width: 768px) { 
+                           margin: 0 10px;
+                        }
+                        i{
+                            color: $white-color;
+                            font-size: 11px;
+                            @media (min-width: 768px) { 
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

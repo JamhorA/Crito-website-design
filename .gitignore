@@ -1,0 +1,19 @@
+
+
+# Loggfiler
+*.log
+
+# Temporära filer och kataloger
+*.tmp
+*.swp
+
+.DS_Store # för macOS
+Thumbs.db # för Windows
+
+.idea/ # för JetBrains IDEs som WebStorm eller IntelliJ
+.vscode/ # om du använder Visual Studio Code och inte vill spåra dess inställningar
+
+/dist
+/build
+
+.secret

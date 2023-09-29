@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+
+$btn-border-radius: 40px;
+$btn-padding: 10px 40px;
+
+$btn-primary: $btn-primary-color, $dark-text-color, $btn-border-radius, $btn-padding;
+$btn-solid: $dark-text-color, $btn-border-radius, $btn-padding;
+$btn-dark: $dark-text-color, $btn-border-radius, $btn-padding;
+
+
+
+@mixin btn-primary-schema($bg, $text, $b-radius, $btn-p){
+    background-color: $bg;
+    color: $text;
+    border: none;
+    border-radius: $b-radius;
+    padding: $btn-p;
+}
+@mixin btn-solid-schema($text, $b-radius, $btn-p){
+    color: $text;
+    border-radius: $b-radius;
+    padding: $btn-p;
+    background-color: transparent;
+
+}
+@mixin btn-dark-schema($bg, $b-radius, $btn-p){
+    background-color: $bg;
+    border-radius: $b-radius;
+    padding: $btn-p;
+    color: white;
+
+}

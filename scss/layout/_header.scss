@@ -1,0 +1,198 @@
+@use '../abstracts' as *;
+body{
+    color: $dark-text-color;
+}
+
+header {
+    // background: #F0EFE9;
+    background-color: $header-bg-color;
+    padding: 12px 0;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 70px;
+        @media (max-width: 992px) { 
+           
+            gap: 20px;
+         }
+        
+
+        .menu-toggle {
+            display: flex;
+            border: none;
+            font-size: 25px;
+            @media (min-width: 768px) { 
+                display: none;
+            }
+            i{
+                color: $dark-text-color;
+            }
+        }
+    
+        .navbar-menu {
+            @media (min-width: 768px) { 
+                display: flex;
+                position: relative;
+                top: auto;
+                    
+                }
+            
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background: $header-bg-color;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            z-index: 1;
+            
+
+            .h-info-media{
+                @media (min-width: 768px) { 
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10px;
+                    &::after{
+                        border-bottom: 1px solid RGBA(25,25,25,0.1 );
+                        content: "";
+                        position: absolute;
+                        top: 30px;
+                        width: 100%;
+                    }
+
+                }
+                .contact-info{
+                    display: none;
+                    @media (min-width: 768px) { 
+                    display: flex;
+                    gap: 38px;
+
+                        .left-border{
+                            border-left: 2px solid RGBA(25,25,25,0.1 );
+                            height: 25px;
+                            i{
+                                padding-left: 20px;
+                                @media (max-width: 992px) { 
+           
+                                    gap: 10px;
+                                 }
+                            }
+                           
+                        }
+                        p{
+                            color: $dark-text-color;
+                        }
+                        
+                    }
+                    @media (max-width: 992px) { 
+           
+                        gap: 10px;
+                     }
+                   
+                
+                }
+            
+                 
+                .social-media-icons{
+                    display: flex;
+                    gap: 20px;
+                    @media (max-width: 992px) { 
+           
+                        gap: 10px;
+                     }
+                    a{
+                        i{
+                            color: $dark-text-color;
+
+                        }
+                        
+                    }
+                   
+                }
+            }
+
+            .h-nav{
+                @media (min-width: 768px){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                nav{
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 3px;
+                        margin-bottom: 5px;
+                        @media (min-width: 768px) { 
+
+                            flex-direction: row;
+                            gap: 35px;
+                            
+                        }
+                        li{
+                            list-style: none;
+                            a{
+                                color: $dark-text-color;
+                                text-decoration: none;
+                            }
+                            a:after {
+                                content: "";
+                                display: flex;
+                                width: 0;
+                                height: 2px;
+                                background-color: $dark-text-color; /* Färgen på bottenkanten */
+                                transition: width 0.1s ease;
+                                margin: 0 auto;
+                            }
+                        }
+                        li.active a:after {
+                            width: 50%; /* Visa bottenkanten för det aktuella li-elementet */
+                        }
+                    }
+                }
+                .login-button{
+                    
+                    border-radius: 40px;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 10px;
+                    
+                    button{
+                        text-decoration: none;
+                        border: none;
+                        padding: 10px;
+                        border-radius: 40px;
+                        min-width: 125px;
+                        color: $dark-text-color;
+                        background-color: $btn-primary-color;
+                        
+                        
+                    }
+                }
+            }
+        }
+    
+        .navbar-menu.active {
+            display: flex;
+            align-items: center;
+            // padding-top: 20px;
+            margin-top: 15px;
+        }
+
+        .ham-btn .menu-toggle{
+            font-size: 25px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            @media (min-width: 992px){
+                display: none;
+            }
+        }
+        
+    }
+}

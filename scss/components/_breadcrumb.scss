@@ -1,0 +1,69 @@
+@use '../abstracts' as *;
+
+.breadcrumb{
+    background-color: $header-bg-color;
+    min-height: 100px;
+    position: relative;
+    @media (min-width: 1200px) { 
+        height: 150px;
+    }
+    @media (min-width: 1400px) { 
+        height: 200px;
+    }
+    .container{
+        .titles{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+        }
+        div:nth-child(2){
+            font-weight: bold;
+        }
+        .breadcrumb-title{
+            display: flex;
+            justify-content: center;
+            .title{
+                font-weight: bold;
+                font-size: 24px;
+                @media (min-width: 768px) { 
+                }
+                @media (min-width: 992px) { 
+                    font-size: 36px;
+                }
+                @media (min-width: 1200px) { 
+                    font-size: 45px;
+                }
+            }
+        }
+
+    }
+    .icon{
+        width: 100%;
+
+        img{
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            left: -20px;
+            bottom: 0;
+            @media (min-width: 768px) { 
+                width: 300px;
+                height: 75px;
+            }
+            @media (min-width: 992px) { 
+                width: 400px;
+                height: 100px;
+            }
+            @media (min-width: 1200px) { 
+                width: 600px;
+                height: 150px;
+            }
+            @media (min-width: 1400px) { 
+                width: 800px;
+                height: 200px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,165 @@
+@use '../abstracts' as *;
+@use 'buttons' as *;
+
+.contact{
+    margin: 40px 0;
+    @media (min-width: 1200px) {
+        margin: 80px 0;
+    }
+    @media (min-width: 1400px) {
+        margin: 120px 0;
+    }
+    .container{
+        .info{
+            padding: 30px;
+            @media (min-width: 768px) {
+                display: flex;
+                padding: 0;
+                margin-bottom: 30px;
+                @media (min-width: 992px) {
+                    justify-content: space-between;
+                }
+                @media (min-width: 1200px) {
+                    margin-bottom: 60px;
+                }
+            }
+            .item{
+                border: 1px solid $dark-text-color;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin: 10px auto;
+                padding: 10px;
+                gap: 20px;
+                @media (min-width: 992px) {
+                    margin: 10px 0;
+                    padding: 40px;
+                }
+                @media (min-width: 1200px) {
+                    padding: 60px;
+                }
+                @media (min-width: 1400px) {
+                    padding: 70px 100px;
+                }
+                .icon{
+                    display: flex;
+                    align-items: flex-start;
+                    
+                    i{
+                        background-color: $dark-text-color;
+                        color: white;
+                        padding: 15px;
+                        border-radius: 50%;
+                        @media (min-width: 992px) {
+                            font-size: 22px;
+                            padding: 20px;
+                        }
+                    }
+
+                }
+                .content{
+                    .title{
+                        font-weight: bold;
+                        @media (min-width: 992px) {
+                            font-size: 22px;
+                        }
+                    }
+                    div{}
+                }
+            }
+        }
+        .message{
+            background-color: $header-bg-color;
+            padding: 30px;
+            @media (min-width: 768px) {
+                padding: 50px;
+            }
+            @media (min-width: 992px) {
+                padding: 80px;
+            }
+            @media (min-width: 1200px) {
+                padding: 120px;
+            }
+            @media (min-width: 1400px) {
+                padding: 120px 160px;
+            }
+            form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+                .title{
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 18px;
+                    @media (min-width: 768px) {
+                        font-size: 24px; 
+                    }
+                    @media (min-width: 992px) { 
+                        font-size: 36px;
+                    }
+                    @media (min-width: 1200px) { 
+                        font-size: 45px;
+                        max-width: 440px;
+                    }
+                }
+                input{
+                    width: 100%;
+                    border: none;
+                    padding: 15px 30px;
+                    border-radius: 40px;
+                    @media (min-width: 1200px) {
+                        padding: 20px 40px;
+                    }
+                }
+                input:focus{
+                    outline: none;
+                }
+                textarea{
+                    width: 100%;
+                    border: none;
+                    padding: 30px;
+                    border-radius: 30px;
+                    @media (min-width: 1200px) {
+                        padding: 30px 40px;
+                    }
+                }
+                textarea:focus{
+                    outline: none;
+                }
+                button{
+                    width: 100%;
+                    @media (min-width: 992px) {
+                        margin-top: 20px;
+                    }
+                    @media (min-width: 1200px) {
+                        padding: 20px;
+                    }
+                    @include btn-primary-schema($btn-primary...);
+                    i{
+                        margin-left: 10px;
+                        transform: rotate(45deg);
+                    }
+                }
+
+            }
+        }
+    }
+}
+.location{
+    @media (min-width: 992px) {
+        margin-top: 100px;
+    }
+    iframe{
+        width: 100%;
+        min-height: 300px;
+        @media (min-width: 992px) {
+            min-height: 450px;
+        }
+        @media (min-width: 1200px) {
+            min-height: 620px;
+        }
+    }
+}

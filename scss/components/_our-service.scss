@@ -1,0 +1,115 @@
+@use '../abstracts' as *;
+@use 'buttons' as *;
+
+.our-service{
+    background-color: $header-bg-color;
+    padding: 40px 0;
+    @media (min-width: 1400px) { 
+        padding: 120px 0;
+    }
+    .container{
+        .title-service{
+            margin: 30px 0;
+            @media (min-width: 992px) { 
+                max-width: 500px;
+            }
+            @media (min-width: 1400px) { 
+                max-width: 500px;
+            }
+            span{
+                color: $red-span-clr;
+                @media (min-width: 992px) { 
+                    font-size: 18px;
+                }
+            }
+            .title{
+                font-weight: bold;
+                font-size: 24px;
+                @media (min-width: 992px) { 
+                    font-size: 36px;
+                }
+                @media (min-width: 1200px) { 
+                    font-size: 45px;
+                }
+            }
+        }
+        .content{
+            @media (min-width: 992px) { 
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+            }
+            
+            .item{
+                background-color: $white-color;
+                margin: 10px 0;
+                padding: 60px 30px 20px 30px;
+                position: relative;
+                @media (min-width: 992px) { 
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                @media (min-width: 1400px) { 
+                    gap: 30px;
+                    max-width: 300px;
+                }
+                .title{
+                    font-weight: bold;
+                    @media (min-width: 992px) { 
+                        font-size: 22px;
+                    }
+                }
+                .text{}
+                .btn{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    
+                    i{
+                        background-color: black;
+                        color: $white-color;
+                        padding: 10px;
+                        border-radius: 50%;
+                        @media (min-width: 768px) { 
+                            padding: 15px;
+                        }
+                    }
+                }
+            }
+            .item::after{
+                content: '';
+                width: 40px;
+                height: 2px;
+                background-color: black;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+            }
+            .y-item{
+                background-color: $btn-primary-color;
+                .btn{
+                    i{
+                        background-color: $white-color;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            button{
+                @include btn-solid-schema($btn-solid...);
+                @media (min-width: 1400px) { 
+                    padding: 15px 40px;
+                }
+                i{
+                    transform: rotate(45deg);
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

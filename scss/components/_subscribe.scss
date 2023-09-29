@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+@use 'buttons' as *;
+
+
+.subsicribe{
+    background-color: $header-bg-color;
+    padding: 30px 0 60px 0;
+    @media (min-width: 768px) { 
+        padding: 30px 0;
+    }
+    @media (min-width: 992px) { 
+        padding: 40px 0;
+    }
+    position: relative;
+    .container{
+        @media (min-width: 768px) { 
+            display: flex;
+            justify-content: center;
+        }
+        div{
+            @media (min-width: 992px) { 
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            @media (min-width: 1200px) { 
+                justify-content: space-between;
+                gap: 40px;
+            }
+            .text{
+                .title{
+                    font-weight: bold;
+                    font-size: 24px;
+                    @media (min-width: 1200px) { 
+                        font-size: 36px;
+                    }
+                    @media (min-width: 1400px) { 
+                        font-size: 45px;
+                    }
+                }
+            }
+            .form{
+                display: flex;
+                gap: 10px;
+                margin: 30px 0;
+                input{
+                    border-radius: 40px;
+                    border: none;
+                    padding: 10px 20px;
+                }
+                input:focus {
+                    outline: none
+                  }
+                
+                button{
+                    @include btn-primary-schema($btn-primary...);
+                    i{
+                        margin-left: 10px;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            .icon{
+                position: absolute;
+                right: 0;
+                bottom: 10px;
+                @media (min-width: 768px) { 
+                    bottom: 60px;
+                }
+                img{
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}

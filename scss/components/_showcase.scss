@@ -1,0 +1,98 @@
+@use '../abstracts' as *;
+@use 'buttons' as *;
+
+
+ .showcase{
+    background-color: $header-bg-color;
+    .item{
+
+        padding: 20px 0 0 0;
+        @media (min-width: 768px) { 
+            display: flex;
+            direction: rtl;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .image{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .content{
+            direction: ltr;
+            width: 100%;
+
+            .title{
+                padding: 20px;
+                font-weight: bolder;
+                font-size: 36px;
+                @media (min-width: 768px) { 
+                    font-size: 40px;
+                }
+                @media (min-width: 992px) { 
+                    font-size: 59px;
+                }
+                @media (min-width: 1400px) { 
+                    font-size: 83px;
+                }
+            }
+            .text{
+                padding: 0 20px;
+                font-size: 16px;
+                color: $dark-text-color;
+                @media (min-width: 992px) { 
+                    font-size: 20px;
+                }
+            }
+            .btn{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                gap: 20px;
+                @media (min-width: 992px) { 
+                    justify-content: flex-start;
+                }
+                button{
+                    align-self: center;
+                    cursor: pointer;
+                    font-size: 11px;
+                    padding: 60px;
+                    @media (min-width: 992px) { 
+                        font-size: 16px;
+                    }
+                    i{
+                        margin-left: 10px;
+                        right: 20px;
+                        transform: rotate(45deg)
+                        
+                    }
+                }
+                .get-btn{
+                    @include btn-primary-schema($btn-primary...);
+                }
+                .learn-btn{
+                    @include btn-solid-schema($btn-solid...);
+                }
+            }
+
+        }
+    }
+    .line-item{
+        position: relative;
+        width: 100%;
+        .left-white-lines{
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            @media (min-width: 768px) { 
+
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 50%;
+            }
+        }
+
+    }
+}
